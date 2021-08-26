@@ -1,0 +1,11 @@
+{
+  "name": "@mono-demo/common",
+  "version": "0.2.0",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "dependencies": {
+    "antd": "4.9.4"
+  }
+}
