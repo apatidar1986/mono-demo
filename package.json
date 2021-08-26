@@ -4,6 +4,8 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.2",
     "lerna": "^4.0.0"
   },
@@ -14,7 +16,8 @@
     "start:app": "lerna --scope @mono-demo/app run start",
     "build:admin": "lerna --scope @mono-demo/admin run build",
     "build:app": "lerna --scope @mono-demo/app run build",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "commit": "git-cz"
   },
   "workspaces": [
     "packages/*"
@@ -141,5 +144,15 @@
     "presets": [
       "react-app"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+ "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
