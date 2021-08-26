@@ -44,7 +44,7 @@ const WaterForm = () => {
         rules={[
           {
             required: true,
-            message: '请输入姓名',
+            message: '请输入名字',
           },
         ]}
       >
